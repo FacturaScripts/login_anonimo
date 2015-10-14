@@ -50,9 +50,9 @@
                      <li><a href="{#FS_COMMUNITY_URL#}/index.php?page=community_questions" target="_blank">Preguntas</a></li>
                      <li><a href="{#FS_COMMUNITY_URL#}/index.php?page=community_errors" target="_blank">Errores</a></li>
                      <li><a href="{#FS_COMMUNITY_URL#}/index.php?page=community_ideas" target="_blank">Sugerencias</a></li>
-                     <li><a href="{#FS_COMMUNITY_URL#}/index.php?page=community_all" target="_blank">Todo</a></li>
+                     <li><a href="{#FS_COMMUNITY_URL#}/index.php?page=community_colabora" target="_blank">Colabora</a></li>
                      <li class="divider"></li>
-                     <li><a href="#" id="b_feedback">Informar...</a></li>
+                     <li><a href="#" id="b_feedback"><span class="glyphicon glyphicon-send"></span> &nbsp; Informar...</a></li>
                   </ul>
                </li>
             </ul>
@@ -88,10 +88,10 @@
             </div>
             <div class="col-md-3">
                <div class="form-group">
-                  <input type="text" name="user" class="form-control input-lg" placeholder="Usuario" autocomplete="off"/>
+                  <input type="text" name="user" class="form-control input-lg" maxlength="12" placeholder="Usuario" autocomplete="off"/>
                </div>
                <div class="form-group">
-                  <input type="password" class="form-control input-lg" name="password" maxlength="20" placeholder="Contraseña"/>
+                  <input type="password" class="form-control input-lg" name="password" maxlength="12" placeholder="Contraseña"/>
                </div>
                <button class="btn btn-block btn-primary" type="submit" onclick="this.disabled=true;this.form.submit();">
                   <span class="glyphicon glyphicon-log-in"></span> &nbsp; Iniciar sesión
