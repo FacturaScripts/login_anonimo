@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="shortcut icon" href="view/img/favicon.ico" />
    <link rel="stylesheet" href="view/css/bootstrap-yeti.min.css" />
-   <script type="text/javascript" src="view/js/jquery-2.1.1.min.js"></script>
+   <script type="text/javascript" src="view/js/jquery.min.js"></script>
    <script type="text/javascript" src="view/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="view/js/jquery.ui.shake.js"></script>
    <script type="text/javascript">
@@ -76,26 +76,38 @@
    </div>
    {/if}
    
-   <div class="visible-md visible-lg" style="margin-bottom: 100px;"></div>
-   
    <form name="f_login" action="index.php?nlogin={$nlogin}" method="post" class="form" role="form">
       <div class="container">
          <div class="row" style="margin-top: 20px;">
-            <div class="col-md-3 col-md-offset-3">
-               <div class="thumbnail">
-                  <img src="plugins/login_anonimo/view/img/PASSWORDFS.png" alt="login"/>
+            <div class="col-md-6 col-md-offset-3">
+               <div class="page-header">
+                  <h1>
+                     <span class="glyphicon glyphicon-user"></span> &nbsp; Iniciar sesión
+                  </h1>
                </div>
-            </div>
-            <div class="col-md-3">
-               <div class="form-group">
-                  <input type="text" name="user" class="form-control input-lg" maxlength="12" placeholder="Usuario" autocomplete="off"/>
+               <div class="well well-sm">
+                  <br/>
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="col-sm-5">
+                           <div class="thumbnail hidden-xs">
+                              <img src="plugins/login_anonimo/view/img/logo.png" alt="login"/>
+                           </div>
+                        </div>
+                        <div class="col-sm-7">
+                           <div class="form-group">
+                              <input type="text" name="user" class="form-control input-lg" maxlength="12" placeholder="Usuario" autocomplete="off"/>
+                           </div>
+                           <div class="form-group">
+                              <input type="password" class="form-control input-lg" name="password" maxlength="12" placeholder="Contraseña"/>
+                           </div>
+                           <button class="btn btn-block btn-primary" type="submit" onclick="this.disabled=true;this.form.submit();">
+                              <span class="glyphicon glyphicon-log-in"></span> &nbsp; Iniciar sesión
+                           </button>
+                        </div>
+                     </div>
+                  </div>
                </div>
-               <div class="form-group">
-                  <input type="password" class="form-control input-lg" name="password" maxlength="12" placeholder="Contraseña"/>
-               </div>
-               <button class="btn btn-block btn-primary" type="submit" onclick="this.disabled=true;this.form.submit();">
-                  <span class="glyphicon glyphicon-log-in"></span> &nbsp; Iniciar sesión
-               </button>
             </div>
          </div>
       </div>
