@@ -78,7 +78,7 @@
    
    <form name="f_login" action="index.php?nlogin={$nlogin}" method="post" class="form" role="form">
       <div class="container">
-         <div class="row" style="margin-top: 20px;">
+         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                <div class="page-header">
                   <h1>
@@ -91,7 +91,13 @@
                      <div class="row">
                         <div class="col-sm-5">
                            <div class="thumbnail hidden-xs">
+                              {if="file_exists('tmp/'.FS_TMP_NAME.'logo.png')"}
+                              <img src="tmp/{#FS_TMP_NAME#}logo.png" alt="login"/>
+                              {elseif="file_exists('tmp/'.FS_TMP_NAME.'logo.jpg')"}
+                              <img src="tmp/{#FS_TMP_NAME#}logo.jpg" alt="login"/>
+                              {else}
                               <img src="plugins/login_anonimo/view/img/logo.png" alt="login"/>
+                              {/if}
                            </div>
                         </div>
                         <div class="col-sm-7">
