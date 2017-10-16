@@ -1,0 +1,191 @@
+{include="header"}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h1>
+                    <i class="fa fa-globe" aria-hidden="true"></i> Login anónimo
+                    <a class="btn btn-xs btn-default" href="{$fsc->url()}" title="Recargar la página">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="$fsc->chat_soporte_ok()"}
+            <a href="{$fsc->url()}&opcion=chat_soporte&status=disable" class="btn btn-block btn-danger">
+                <span class="glyphicon glyphicon-ok"></span> &nbsp;
+                <i class="fa fa-life-ring" aria-hidden="true"></i> &nbsp;
+                Desactivar chat de soporte
+            </a>
+            {else}
+            <a href="{$fsc->url()}&opcion=chat_soporte&status=enable" class="btn btn-block btn-info">
+                <i class="fa fa-life-ring" aria-hidden="true"></i> &nbsp;
+                Activar chat de soporte
+            </a>
+            {/if}
+            <br/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h2>
+                    <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                    Puede que también pueda ser de tu interés
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="in_array('Agenda_de_Pagos_y_Cobros',$GLOBALS['plugins'])"}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-success btn-block">
+                <span class="fa fa-check"></span>
+                <span class="text-wrap">&nbsp; Agenda de Pagos y Cobros</span>
+            </a>
+            {else}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-default btn-block">
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                <span class="text-wrap">&nbsp; Agenda de Pagos y Cobros</span>
+            </a>
+            {/if}
+        </div>
+        <div class="col-sm-8">
+            <p class="help-block">
+                Calendario sobre el cual se listas todos los cobros y pagos del mes, ya sean desde las propias facturas, o mediante el plugin de tesoreria.<br/>
+                Permite añadir pagos y cobros manualmente.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="in_array('agenda_de_prevision_de_entrada_de_mercancia',$GLOBALS['plugins'])"}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-success btn-block">
+                <span class="fa fa-check"></span></span>
+                <span class="text-wrap">&nbsp; Agenda previsión de entrada de mercancía</span>
+            </a>
+            {else}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-default btn-block">
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                <span class="text-wrap">&nbsp; Agenda previsión de entrada de mercancía</span>
+            </a>
+            {/if}
+        </div>
+        <div class="col-sm-8">
+            <p class="help-block">
+                Calendario que permite ver la previsión de entradas de artículos en los pedidos de compra.<br/>
+                Además de incorporar un buscador de artículos basado en la fecha prevista de pedidos pendientes.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="in_array('extraccion_qlik',$GLOBALS['plugins'])"}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-success btn-block">
+                <span class="fa fa-check"></span></span>
+                <span class="text-wrap">&nbsp; Extracción Qlik</span>
+            </a>
+            {else}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-default btn-block">
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                <span class="text-wrap">&nbsp; Extracción Qlik</span>
+            </a>
+            {/if}
+        </div>
+        <div class="col-sm-8">
+            <p class="help-block">
+                Plugin para permitir extraer datos de documentos de compra o venta en XLS para ser utilizados en herramientas como Qlik o cualquier herramienta externa para analizar datos.<br/>
+                Relaciona datos entre las tablas referenciadas entre si en las propias de los documentos (por ejemplo: clientes, artículos, famílias, grupos de clientes, ...)
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="in_array('firmar_documentos',$GLOBALS['plugins'])"}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-success btn-block">
+                <span class="fa fa-check"></span></span>
+                <span class="text-wrap">&nbsp; Firmar documentos</span>
+            </a>
+            {else}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-default btn-block">
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                <span class="text-wrap">&nbsp; Firmar documentos</span>
+            </a>
+            {/if}
+        </div>
+        <div class="col-sm-8">
+            <p class="help-block">
+                Permite recoger firmas desde una pantalla táctil (smartphone, tablets o similares).<br/>
+                Soportado desde presupuestos, pedidos, servicios, albaranes y facturas de venta.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="in_array('plantillas_html2pdf',$GLOBALS['plugins'])"}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-success btn-block">
+                <span class="fa fa-check"></span></span>
+                <span class="text-wrap">&nbsp; Plantillas HTML2PDF</span>
+            </a>
+            {else}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-default btn-block">
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                <span class="text-wrap">&nbsp; Plantillas HTML2PDF</span>
+            </a>
+            {/if}
+        </div>
+        <div class="col-sm-8">
+            <p class="help-block">
+                Permite generar plantillas de impresión a partir de plantillas preparadas en código HTML, incluyendo la impresión de firmas.<br/>
+                Incluye soporte para realizar plantillas propias en otra carpeta, para no perder los cambios entre actualizaciones.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="in_array('expedientes',$GLOBALS['plugins'])"}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-success btn-block">
+                <span class="fa fa-check"></span></span>
+                <span class="text-wrap">&nbsp; Expedientes</span>
+            </a>
+            {else}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-default btn-block">
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                <span class="text-wrap">&nbsp; Expedientes</span>
+            </a>
+            {/if}
+        </div>
+        <div class="col-sm-8">
+            <p class="help-block">
+                Plugin para Proyectos, ideal para agrupar documentos de compra y venta en expedientes y documentos adjuntos relaciones con dicho expediente, proyecto, obra etc.<br/>
+                Es ideal para empresas que realizan proyectos de cualquier tipo, Obras, o Trabajos, ya que permite agrupar todo lo relacionado con un proyecto.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {if="in_array('control_presencia',$GLOBALS['plugins'])"}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-success btn-block">
+                <span class="fa fa-check"></span></span>
+                <span class="text-wrap">&nbsp; Control presencia</span>
+            </a>
+            {else}
+            <a href="index.php?page=admin_home#descargas" class="btn btn-sm btn-default btn-block">
+                <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                <span class="text-wrap">&nbsp; Control presencia</span>
+            </a>
+            {/if}
+        </div>
+        <div class="col-sm-8">
+            <p class="help-block">
+                Registro de Entrada y Salida del Personal
+            </p>
+        </div>
+    </div>
+</div>
+
+{include="footer"}
